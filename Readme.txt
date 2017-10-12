@@ -1,15 +1,1 @@
-
-Read me help
-
-Read me 
-
-HelloWorld
-
-Andrew
-
-NewProject
-Read me!!!!
-
-
-
-
+This project is a cross-platform mobile app for used resale items in the kalamazoo college community. 
