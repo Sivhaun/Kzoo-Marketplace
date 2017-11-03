@@ -31,7 +31,8 @@ buildscript {
 
 	dependencies {
 		classpath "com.android.tools.build:gradle:2.2.3"
-	}
+    classpath "com.google.gms:google-services:3.1.0"
+    	}
 }
 
 apply plugin: "com.android.application"
@@ -828,3 +829,5 @@ deleteFlavors.dependsOn(deleteMetadata)
 deleteConfigurations.dependsOn(deleteFlavors)
 deleteGeneratedBindings.dependsOn(deleteConfigurations)
 clean.dependsOn(deleteGeneratedBindings)
+
+apply plugin: 'com.google.gms.google-services'

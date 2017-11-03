@@ -9,7 +9,8 @@ exports.loaded = function(args) {
     page.bindingContext = user;
 };
 
-function completeRegistration() {
+
+exports.register = function() {
     user.register()
         .then(function() {
             dialogsModule
@@ -18,15 +19,9 @@ function completeRegistration() {
                     frameModule.topmost().navigate("views/login/login");
                 });
         }).catch(function(error) {
-            console.log(error);
-            dialogsModule
-                .alert({
-                    message: "Unfortunately we were unable to create your account.",
-                    okButtonText: "OK"
-                });
+            dialogsModule.alert({
+                message: error,
+                okButtonText: "OK"
+            });
         });
 }
-
-exports.register = function() {
-    completeRegistration();
-};
